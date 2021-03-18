@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>Omple el formulari !</h1>
+    <div class="form" style="width: 400px">
+        DNI: <input type="text" id="dni" style="float: right"><br/><br/>
+        Nom: <input type="text" id="name" style="float: right"><br/><br/>
+        Cognoms: <input type="text" id="cognom" style="float: right"><br/><br/>
+        Nom d'usuari: <input type="text" id="user" style="float: right"><br/><br/>
+        Password: <input type="password" id="passwd" style="float: right"><br/><br/>
+        Direcció: <input type="text" id="adress" style="float: right"><br/><br/>
+        <button type="button" id="data" onclick="guardarDades()">Enviar dades</button>
+    </div>
+    <script>
+        function guardarDades(){
+            let dni = document.getElementById("dni").value;
+            let nom = document.getElementById("name").value;
+            let cognom = document.getElementById("cognom").value;
+            let user = document.getElementById("user").value;
+            let passwd = document.getElementById("passwd").value;
+            let adress = document.getElementById("adress").value;
+            if(dni !== "" && nom !== "" && cognom !== "" && user !== "" && passwd !== "" && adress !== ""){
+                if(validarDNI(dni)){
+                    localStorage.setItem("dni",dni);
+                    localStorage.setItem("nom",nom);
+                    localStorage.setItem("cognom",cognom);
+                    localStorage.setItem("user",user);
+                    localStorage.setItem("passwd",passwd);
+                    localStorage.setItem("adress",adress);
+                }else{
+                    alert("El DNI no és correcte");
+                }
+            }else{
+                alert("Falten omplenar camps");
+            }
+        }
+
+        function validarDNI(dni) {
+            let expresio_regular_dni;
+            expresio_regular_dni = /^\d{8}[a-zA-Z]$/;
+            if(expresio_regular_dni.test (dni) === true){
+                return true;
+            }else{
+                return false;
+            }
+        }
+    </script>
+</body>
+</html>
