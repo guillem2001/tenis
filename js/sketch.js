@@ -1,6 +1,7 @@
 
 function setup() {
     createCanvas(1500, 800);
+    bg = loadImage('img/pista.jpg');
     dino = createSprite(150, 150);
     santa = createSprite(1400, 150);
     santa.addAnimation('walk','img/santa/Idle (1).png','img/santa/Idle (2).png','img/santa/Idle (3).png','img/santa/Idle (4).png','img/santa/Idle (5).png','img/santa/Idle (6).png','img/santa/Idle (7).png','img/santa/Idle (8).png','img/santa/Idle (9).png','img/santa/Idle (10).png','img/santa/Idle (11).png','img/santa/Idle (12).png','img/santa/Idle (13).png','img/santa/Idle (14).png','img/santa/Idle (15).png');
@@ -8,7 +9,7 @@ function setup() {
 }
 
 function draw() {
-    background(0, 255, 255);
+    background(bg);
     santa.mirrorX(-1);
     //specify the animation instance and its x,y position
     //animation() will update the animation frame as well
