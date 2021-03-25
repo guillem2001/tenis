@@ -16,15 +16,19 @@
         <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
       </path>
     </expand>
-    <select />
+    <select>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="BRANCH:origin/main" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/img/pista.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/dino.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/game.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/gameobject.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/js/santa.js" afterDir="false" />
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="afegim estructura de les classes">
+      <change afterPath="$PROJECT_DIR$/js/ball.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/js/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sketch.js" afterDir="false" />
@@ -46,6 +50,11 @@
     </option>
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="ProjectId" id="1pw5Ol6UdPHPW1UR035zrESxsJX" />
@@ -92,8 +101,18 @@
       <option name="presentableId" value="Default" />
       <updated>1616081281313</updated>
       <workItem from="1616081282636" duration="3489000" />
-      <workItem from="1616084998566" duration="779000" />
+      <workItem from="1616084998566" duration="897000" />
+      <workItem from="1616595151508" duration="28000" />
+      <workItem from="1616684159761" duration="5137000" />
     </task>
+    <task id="LOCAL-00001" summary="afegim estructura de les classes">
+      <created>1616085893009</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1616085893009</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -104,11 +123,28 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/main" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="afegim estructura de les classes" />
+    <option name="LAST_COMMIT_MESSAGE" value="afegim estructura de les classes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="657" y="253" key="run.anything.popup" timestamp="1616084763763">
