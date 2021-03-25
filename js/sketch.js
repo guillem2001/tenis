@@ -11,6 +11,7 @@ function setup() {
     player1 = new Player('player1');
     player2 = new Player('player2');
     player1.playerInici('player1');
+    player2.playerInici('player2');
 }
 
 
