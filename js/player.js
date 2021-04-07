@@ -31,4 +31,14 @@ class Player {
         }
     }
 
+    playerUp(){
+        this.jugadorSprite.position.y -= 5;
+        this.jugadorSprite.changeAnimation('walk');
+    }
+
+    playerDown(){
+        this.jugadorSprite.position.y += 5;
+        this.jugadorSprite.changeAnimation('walk');
+    }
+
 }
