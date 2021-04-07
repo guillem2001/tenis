@@ -26,10 +26,9 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="cambiem parametres">
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="afegim que es moguin els jugadors">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +102,7 @@
       <workItem from="1616595151508" duration="28000" />
       <workItem from="1616684159761" duration="5539000" />
       <workItem from="1616773787770" duration="563000" />
-      <workItem from="1617800544463" duration="1827000" />
+      <workItem from="1617800544463" duration="2073000" />
     </task>
     <task id="LOCAL-00001" summary="afegim estructura de les classes">
       <created>1616085893009</created>
@@ -126,7 +125,14 @@
       <option name="project" value="LOCAL" />
       <updated>1616690557627</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="afegim que es moguin els jugadors">
+      <created>1617802448395</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1617802448395</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -160,7 +166,8 @@
     <MESSAGE value="afegim estructura de les classes" />
     <MESSAGE value="afegim la classe payer i definim una funcio, afegim tambe els spirites i animacions dels players" />
     <MESSAGE value="cambiem parametres" />
-    <option name="LAST_COMMIT_MESSAGE" value="cambiem parametres" />
+    <MESSAGE value="afegim que es moguin els jugadors" />
+    <option name="LAST_COMMIT_MESSAGE" value="afegim que es moguin els jugadors" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1617802101158">
