@@ -26,17 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="afegim classe ball i la fiquem">
-      <change afterPath="$PROJECT_DIR$/img/ball/ball10.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball2.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball3.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball4.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball5.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball6.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball7.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball8.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/img/ball/ball9.png" afterDir="false" />
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="afegim imatges a la bola per fer el sprite">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/ball.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ball.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -110,7 +103,9 @@
       <workItem from="1616595151508" duration="28000" />
       <workItem from="1616684159761" duration="5539000" />
       <workItem from="1616773787770" duration="563000" />
-      <workItem from="1617800544463" duration="3663000" />
+      <workItem from="1617800544463" duration="5456000" />
+      <workItem from="1617806386992" duration="995000" />
+      <workItem from="1617893163000" duration="2198000" />
     </task>
     <task id="LOCAL-00001" summary="afegim estructura de les classes">
       <created>1616085893009</created>
@@ -154,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1617803824620</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="afegim imatges a la bola per fer el sprite">
+      <created>1617804397901</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1617804397901</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -191,7 +193,8 @@
     <MESSAGE value="afegim que es moguin els jugadors" />
     <MESSAGE value="afegim limits per a que els jugadors no surtin del camp" />
     <MESSAGE value="afegim classe ball i la fiquem" />
-    <option name="LAST_COMMIT_MESSAGE" value="afegim classe ball i la fiquem" />
+    <MESSAGE value="afegim imatges a la bola per fer el sprite" />
+    <option name="LAST_COMMIT_MESSAGE" value="afegim imatges a la bola per fer el sprite" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1617802101158">
