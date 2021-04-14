@@ -10,11 +10,15 @@ class Ball {
     ballInici(){
         this.ballSprite.position.x = 600;
         this.ballSprite.position.y = 400;
-        this.ballSprite.setSpeed(5, random(-35,35))
+        this.ballSprite.setSpeed(5, this.randomAngle())
     }
 
-    rebota(player) {
-        this.ballSprite.bounce(player, this.changeDirection());
+    randomAngle(){
+        let numero = 0;
+        while(numero === 0){
+            numero = random (-25,25);
+        }
+        return numero;
     }
 
     moure(){
@@ -51,13 +55,13 @@ class Ball {
         if(ball.ballSprite.position.x<0) {
             ball.ballSprite.position.x = width/2;
             ball.ballSprite.position.y = height/2;
-            ball.ballSprite.setSpeed(5, random(-35,35));
+            ball.ballSprite.setSpeed(5, this.randomAngle());
         }
 
         if(ball.ballSprite.position.x>width) {
             ball.ballSprite.position.x = width/2;
             ball.ballSprite.position.y = height/2;
-            ball.ballSprite.setSpeed(5, random(-35,35));
+            ball.ballSprite.setSpeed(5, this.randomAngle());
         }
     }
 
