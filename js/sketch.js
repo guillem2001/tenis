@@ -15,8 +15,8 @@ function setup() {
     ball.ballInici();
     player1.jugadorSprite.immovable = true;
     player2.jugadorSprite.immovable = true;
-    player1.jugadorSprite.setCollider('rectangle', -2, 2, 55, 175);
-    player2.jugadorSprite.setCollider('rectangle', -2, 2, 55, 175);
+    player1.jugadorSprite.setCollider('rectangle', 0, 2, 70, 175);
+    player2.jugadorSprite.setCollider('rectangle', 0, 2, 70, 175);
     wallTop = createSprite(width/2, -30/2, width, 30);
     wallTop.immovable = true;
 

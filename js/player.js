@@ -33,14 +33,14 @@ class Player {
 
     playerUp(){
         if(this.jugadorSprite.position.y > 90) {
-            this.jugadorSprite.position.y -= 5;
+            this.jugadorSprite.position.y -= 7;
             this.jugadorSprite.changeAnimation('walk');
         }
     }
 
     playerDown(){
         if(this.jugadorSprite.position.y < 710) {
-            this.jugadorSprite.position.y += 5;
+            this.jugadorSprite.position.y += 7;
             this.jugadorSprite.changeAnimation('walk');
         }
     }
