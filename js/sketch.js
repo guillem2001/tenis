@@ -15,7 +15,8 @@ function setup() {
     ball.ballInici();
     player1.jugadorSprite.immovable = true;
     player2.jugadorSprite.immovable = true;
-
+    player1.jugadorSprite.setCollider('rectangle', -2, 2, 55, 175);
+    player2.jugadorSprite.setCollider('rectangle', -2, 2, 55, 175);
     wallTop = createSprite(width/2, -30/2, width, 30);
     wallTop.immovable = true;
 
@@ -27,39 +28,19 @@ function setup() {
 function draw() {
     background(bg);
     drawSprites();
-    /*ball.rebotar(player1);
-    ball.rebotar(player2);
-    ball.ballsprite.collide(jugador1)*/
+
+    ball.ballSprite.bounce(wallTop);
+    ball.ballSprite.bounce(wallBottom);
+    player1.jugadorSprite.debug = mouseIsPressed;
+    player2.jugadorSprite.debug = mouseIsPressed;
+    ball.ballSprite.debug = mouseIsPressed;
     movePlayers();
-    ball.rebota(player1.jugadorSprite);
-    ball.rebota(player2.jugadorSprite);
+    /*ball.rebota(player1.jugadorSprite);
+    ball.rebota(player2.jugadorSprite);*/
     ball.moure();
+    ball.colisions(player1.jugadorSprite,player2.jugadorSprite);
 
-    /*ball.collide(wallTop);
-    ball.collide(wallBottom);
 
-    let swing;
-    if(ball.collide(player1)) {
-        swing = (ball.position.y-player1.position.y)/3;
-        ball.setSpeed(MAX_SPEED, ball.getDirection()+swing);
-    }
-
-    if(ball.collide(player2)) {
-        swing = (ball.position.y-player2.position.y)/3;
-        ball.setSpeed(MAX_SPEED, ball.getDirection()-swing);
-    }
-
-    if(ball.position.x<0) {
-        ball.position.x = width/2;
-        ball.position.y = height/2;
-        ball.setSpeed(MAX_SPEED, 0);
-    }
-
-    if(ball.position.x>width) {
-        ball.position.x = width/2;
-        ball.position.y = height/2;
-        ball.setSpeed(MAX_SPEED, 180);
-    }*/
 }
 
 function movePlayers(){
