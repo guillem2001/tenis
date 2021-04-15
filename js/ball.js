@@ -31,37 +31,32 @@ class Ball {
 
     colisions(player1, player2){
         let swing;
-        if(ball.ballSprite.bounce(player1)) {
-            swing = (ball.ballSprite.position.y-player1.position.y)/3;
-            ball.ballSprite.setSpeed(this.ballSprite.getSpeed(), ball.ballSprite.getDirection()+swing);
-            /*this.changeDirection();*/
-            console.log('hola');
+        if(this.ballSprite.bounce(player1)) {
+            swing = (this.ballSprite.position.y-player1.position.y)/3;
+            this.ballSprite.setSpeed(this.ballSprite.getSpeed(), this.ballSprite.getDirection()+swing);
             if(this.ballSprite.getSpeed() < this.ballSprite.maxSpeed){
                 this.ballSprite.velocity.x = this.ballSprite.velocity.x*1.10;
                 this.ballSprite.velocity.y = this.ballSprite.velocity.y*1.10;
             }
         }
 
-        if(ball.ballSprite.bounce(player2)) {
-            swing = (ball.ballSprite.position.y-player2.position.y)/3;
-            ball.ballSprite.setSpeed(this.ballSprite.getSpeed(), ball.ballSprite.getDirection()-swing);
+        if(this.ballSprite.bounce(player2)) {
+            swing = (this.ballSprite.position.y-player2.position.y)/3;
+            this.ballSprite.setSpeed(this.ballSprite.getSpeed(), this.ballSprite.getDirection()-swing);
             if(this.ballSprite.getSpeed() < this.ballSprite.maxSpeed){
                 this.ballSprite.velocity.x = this.ballSprite.velocity.x*1.10;
                 this.ballSprite.velocity.y = this.ballSprite.velocity.y*1.10;
             }
-            console.log(this.ballSprite.getSpeed());
         }
 
-        if(ball.ballSprite.position.x<0) {
-            ball.ballSprite.position.x = width/2;
-            ball.ballSprite.position.y = height/2;
-            ball.ballSprite.setSpeed(5, this.randomAngle());
+        if(this.ballSprite.position.x<0) {
+            this.ballInici();
+            return 0;
         }
 
-        if(ball.ballSprite.position.x>width) {
-            ball.ballSprite.position.x = width/2;
-            ball.ballSprite.position.y = height/2;
-            ball.ballSprite.setSpeed(5, this.randomAngle());
+        if(this.ballSprite.position.x>width) {
+            this.ballInici();
+            return 1;
         }
     }
 
