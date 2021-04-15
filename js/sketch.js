@@ -5,10 +5,13 @@ var wallTop = null;
 var wallBottom = null;
 var ball = null;
 var MAX_SPEED = 10;
+
+function preload(){
+    game = new Game();
+}
 function setup() {
     createCanvas(1200, 800);
     bg = loadImage('img/pista.jpg');
-    game = new Game();
     game.player1.playerInici('player1');
     game.player2.playerInici('player2');
     game.ball.ballInici();
