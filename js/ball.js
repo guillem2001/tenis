@@ -1,6 +1,12 @@
 class Ball {
-    constructor(){
-        this.speed = 5;
+    constructor(level){
+        if(level === 1){
+            this.speed = 4;
+        }else if(level === 2){
+            this.speed = 6;
+        }else{
+            this.speed = 8;
+        }
         this.direction = 1;
         this.ballSprite = createSprite(600, 400);
         this.ballSprite.addAnimation('ball','img/ball/ball.png','img/ball/ball2.png','img/ball/ball3.png','img/ball/ball4.png','img/ball/ball5.png','img/ball/ball6.png','img/ball/ball7.png','img/ball/ball8.png','img/ball/ball9.png','img/ball/ball10.png');
@@ -10,7 +16,7 @@ class Ball {
     ballInici(){
         this.ballSprite.position.x = 600;
         this.ballSprite.position.y = 400;
-        this.ballSprite.setSpeed(5, this.randomAngle())
+        this.ballSprite.setSpeed(this.speed, this.randomAngle())
     }
 
     randomAngle(){
