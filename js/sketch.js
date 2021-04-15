@@ -36,9 +36,13 @@ function draw() {
     let numero = game.ball.colisions(game.player1.jugadorSprite,game.player2.jugadorSprite);
     if(numero === 0){
         game.player2.points += 1;
+        game.player1.playerInici('player1');
+        game.player2.playerInici('player2');
         console.log(game.player2.points);
     }else if(numero === 1){
         game.player1.points += 1;
+        game.player1.playerInici('player1');
+        game.player2.playerInici('player2');
         console.log(game.player1.points);
     }
 
