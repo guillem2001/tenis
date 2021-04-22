@@ -6,85 +6,76 @@ var wallBottom = null;
 var ball = null;
 var MAX_SPEED = 10;
 
-function preload(){
-    game = new Game();
-}
-function setup() {
-    createCanvas(1200, 800);
-    bg = loadImage('img/pista.jpg');
-    game.player1.playerInici('player1');
-    game.player2.playerInici('player2');
-    game.ball.ballInici();
-    game.player1.jugadorSprite.immovable = true;
-    game.player2.jugadorSprite.immovable = true;
-    game.player1.jugadorSprite.setCollider('rectangle', 0, 2, 70, 175);
-    game.player2.jugadorSprite.setCollider('rectangle', 0, 2, 70, 175);
-    wallTop = createSprite(width/2, -30/2, width, 30);
-    wallTop.immovable = true;
 
-    wallBottom = createSprite(width/2, height+30/2, width, 30);
-    wallBottom.immovable = true;
-}
+new p5(function (p) {
 
-
-function draw() {
-
-    if (frameCount % 60 === 0 && game.timeGame > 0) {
-        game.timeGame--;
+    p.preload = function () {
+        p.game = new Game(p);
     }
-    if(game.player2.points !== 5 && game.player1.points !== 5) {
-        if(game.timeGame !== 0) {
-            background(bg);
-            drawSprites();
+    p.setup = function () {
+        var myCanvas = p.createCanvas(1200, 800);
+        myCanvas.parent("sketch01");
+        p.bg = p.loadImage('img/pista.jpg');
+        p.wallTop = p.createSprite(p.width / 2, -30 / 2, p.width, 30);
+        p.wallTop.immovable = true;
+        p.wallBottom = p.createSprite(p.width / 2, p.height + 30 / 2, p.width, 30);
+        p.wallBottom.immovable = true;
+        p.game.iniciar(p);
+    }
 
-            game.ball.ballSprite.bounce(wallTop);
-            game.ball.ballSprite.bounce(wallBottom);
+    p.draw = function () {
+        if (p.frameCount % 60 === 0 && p.game.timeGame > 0) {
+            p.game.timeGame--;
+        }
+        if (p.game.player2.points !== 5 && p.game.player1.points !== 5) {
+            if (p.game.timeGame !== 0) {
+                p.background(p.bg);
+                p.drawSprites();
 
-            movePlayers();
-            game.ball.moure();
-            let numero = game.ball.colisions(game.player1.jugadorSprite, game.player2.jugadorSprite);
-            if (numero === 0) {
-                game.player2.points += 1;
-                game.player1.playerInici('player1');
-                game.player2.playerInici('player2');
-                console.log(game.player2.points);
-            } else if (numero === 1) {
-                game.player1.points += 1;
-                game.player1.playerInici('player1');
-                game.player2.playerInici('player2');
-                console.log(game.player1.points);
+                p.game.ball.ballSprite.bounce(p.wallTop);
+                p.game.ball.ballSprite.bounce(p.wallBottom);
+
+                p.game.movePlayers(p);
+                p.game.ball.moure();
+                let numero = p.game.ball.colisions(p.game.player1.jugadorSprite, p.game.player2.jugadorSprite, p);
+                if (numero === 0) {
+                    p.game.player2.points += 1;
+                    p.game.player1.playerInici('player1');
+                    p.game.player2.playerInici('player2');
+                    console.log(p.game.player2.points);
+                } else if (numero === 1) {
+                    p.game.player1.points += 1;
+                    p.game.player1.playerInici('player1');
+                    p.game.player2.playerInici('player2');
+                    console.log(p.game.player1.points);
+                }
+            } else {
+                if (p.game.player2.points > p.game.player1.points) {
+                    p.text("SANTA WIN", p.width / 2, p.height * 0.5);
+                } else if (p.game.player2.points < p.game.player1.points) {
+                    p.text("DINO WIN", p.width / 2, p.height * 0.5);
+                } else {
+                    p.text("EMPATE", p.width / 2, p.height * 0.5);
+                }
             }
-        }else{
-            if(game.player2.points > game.player1.points){
-                text("SANTA WIN", width / 2, height * 0.5);
-            }else if (game.player2.points < game.player1.points){
-                text("DINO WIN", width / 2, height * 0.5);
-            }else{
-                text("EMPATE", width / 2, height * 0.5);
+        } else {
+            if (p.game.player2.points !== p.game.pointsWinGame) {
+                p.text("DINO WIN", p.width / 2, p.height * 0.5);
+            } else {
+                p.text("SANTA WIN", p.width / 2, p.height * 0.5);
             }
         }
-    }else{
-        if(game.player2.points !== game.pointsWinGame){
-            text("DINO WIN", width / 2, height * 0.5);
-        }else{
-            text("SANTA WIN", width / 2, height * 0.5);
-        }
     }
-}
+    }, "sketch01");
 
-function movePlayers(){
-    if (keyIsDown(UP_ARROW)) {
-        game.player2.playerUp();
-    }else if (keyIsDown(DOWN_ARROW)) {
-        game.player2.playerDown();
-    }else{
-        game.player2.jugadorSprite.changeAnimation('stand');
+new p5(function (e) {
+
+    e.setup = function () {
+        var myCanvas = e.createCanvas(300, 800);
+        myCanvas.parent("sketch02");
     }
-    if (keyIsDown(87)) {
-        game.player1.playerUp();
-    }else if (keyIsDown(83)) {
-        game.player1.playerDown();
-    }else{
-        game.player1.jugadorSprite.changeAnimation('stand');
+
+    e.draw = function () {
+        e.text("Score: ", e.width / 2, e.height * 0.5);
     }
-}
+}, "sketch02");

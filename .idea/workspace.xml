@@ -26,11 +26,12 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="afegim la funcio preload per carregar el game">
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Afegim el temps maxim">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/dino.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/gameobject.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/santa.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/ball.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/ball.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/game.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/player.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/player.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/js/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sketch.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -110,7 +111,12 @@
       <workItem from="1617893163000" duration="3625000" />
       <workItem from="1618405668003" duration="5755000" />
       <workItem from="1618498217614" duration="1212000" />
-      <workItem from="1618499675361" duration="1560000" />
+      <workItem from="1618499675361" duration="1595000" />
+      <workItem from="1618501296019" duration="8000" />
+      <workItem from="1618578451749" duration="1195000" />
+      <workItem from="1618846206513" duration="1019000" />
+      <workItem from="1618926808310" duration="409000" />
+      <workItem from="1619100060015" duration="3917000" />
     </task>
     <task id="LOCAL-00001" summary="afegim estructura de les classes">
       <created>1616085893009</created>
@@ -217,7 +223,14 @@
       <option name="project" value="LOCAL" />
       <updated>1618500176381</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="Afegim el temps maxim">
+      <created>1618501256616</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1618501256616</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -263,7 +276,8 @@
     <MESSAGE value="Afegim nivell dificultat" />
     <MESSAGE value="Si és marca punt es reseteja la posicio dels jugadors" />
     <MESSAGE value="afegim la funcio preload per carregar el game" />
-    <option name="LAST_COMMIT_MESSAGE" value="afegim la funcio preload per carregar el game" />
+    <MESSAGE value="Afegim el temps maxim" />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegim el temps maxim" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1617802101158">
