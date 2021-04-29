@@ -7,13 +7,14 @@ var ball = null;
 var MAX_SPEED = 10;
 
 
-new p5(function (p) {
+new p5(p =>  {
 
     p.preload = function () {
-        p.game = new Game(p);
+        game = new Game(p);
+        p.game = game;
     }
     p.setup = function () {
-        var myCanvas = p.createCanvas(1200, 800);
+        let myCanvas = p.createCanvas(1200, 800);
         myCanvas.parent("sketch01");
         p.bg = p.loadImage('img/pista.jpg');
         p.wallTop = p.createSprite(p.width / 2, -30 / 2, p.width, 30);
@@ -68,14 +69,21 @@ new p5(function (p) {
     }
     }, "sketch01");
 
-new p5(function (e) {
+new p5(e =>  {
 
     e.setup = function () {
-        var myCanvas = e.createCanvas(300, 800);
-        myCanvas.parent("sketch02");
+        let myCanvas = e.createCanvas(300, 800);
+        myCanvas.parent("sketch01");
     }
 
     e.draw = function () {
-        e.text("Score: ", e.width / 2, e.height * 0.5);
+        e.background(255, 204, 0);
+        let s = "Score Dino: " + game.player1.points;
+        let o = "Score Santa: " + game.player2.points;
+        e.textSize(18);
+        e.text(s, e.width / 2, e.height * 0.5);
+        e.textSize(18);
+        e.text(o, e.width / 2, e.height * 0.6);
+        console.log(s);
     }
 }, "sketch02");
