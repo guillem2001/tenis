@@ -61,9 +61,13 @@ new p5(p =>  {
             }
         } else {
             if (p.game.player2.points !== p.game.pointsWinGame) {
+                p.textSize(18);
                 p.text("DINO WIN", p.width / 2, p.height * 0.5);
+                p.game.timeGame = 0;
             } else {
+                p.textSize(18);
                 p.text("SANTA WIN", p.width / 2, p.height * 0.5);
+                p.game.timeGame = 0;
             }
         }
     }
@@ -80,10 +84,12 @@ new p5(e =>  {
         e.background(255, 204, 0);
         let s = "Score Dino: " + game.player1.points;
         let o = "Score Santa: " + game.player2.points;
+        let t = "Time: " + game.timeGame;
         e.textSize(18);
-        e.text(s, e.width / 2, e.height * 0.5);
+        e.text(s, e.width / 2, e.height * 0.4);
         e.textSize(18);
-        e.text(o, e.width / 2, e.height * 0.6);
-        console.log(s);
+        e.text(o, e.width / 2, e.height * 0.5);
+        e.textSize(18);
+        e.text(t, e.width / 2, e.height * 0.6);
     }
 }, "sketch02");
