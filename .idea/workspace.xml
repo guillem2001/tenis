@@ -26,9 +26,8 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Afegim al redireccio al fer el formulari">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sketch.js" afterDir="false" />
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Afegim el time al score">
+      <change afterPath="$PROJECT_DIR$/instruccions.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -129,7 +128,7 @@
       <workItem from="1619449030532" duration="527000" />
       <workItem from="1619702531517" duration="2104000" />
       <workItem from="1619967639539" duration="2009000" />
-      <workItem from="1619976707694" duration="6506000" />
+      <workItem from="1619976707694" duration="6832000" />
     </task>
     <task id="LOCAL-00001" summary="afegim estructura de les classes">
       <created>1616085893009</created>
@@ -285,7 +284,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619987638154</updated>
     </task>
-    <option name="localTasksCounter" value="23" />
+    <task id="LOCAL-00023" summary="Afegim el time al score">
+      <created>1619989536649</created>
+      <option name="number" value="00023" />
+      <option name="presentableId" value="LOCAL-00023" />
+      <option name="project" value="LOCAL" />
+      <updated>1619989536649</updated>
+    </task>
+    <option name="localTasksCounter" value="24" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -338,7 +344,8 @@
     <MESSAGE value="Afegim la pàgina de configuracio" />
     <MESSAGE value="Canvis al menu i afegim que sino esta fet el formulari no es pugui jugar" />
     <MESSAGE value="Afegim al redireccio al fer el formulari" />
-    <option name="LAST_COMMIT_MESSAGE" value="Afegim al redireccio al fer el formulari" />
+    <MESSAGE value="Afegim el time al score" />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegim el time al score" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1619703279606">
