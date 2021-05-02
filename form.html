@@ -3,39 +3,140 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 </head>
+<style>
+    #canvas{
+        margin-left: 300px;
+    }
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+    }
+
+    li {
+        float: left;
+    }
+
+    li a {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+    }
+
+    /* Change the link color to #111 (black) on hover */
+    li a:hover {
+        background-color: #111;
+    }
+    .active{
+        background-color: green;
+    }
+</style>
 <body>
+<ul>
+    <li><a href="index.html">Inici</a></li>
+    <li><a href="instruccions.html">Instruccions</a></li>
+    <li><a href="conf.html">Configuracio</a></li>
+    <li><a class="active" href="informacio.html">Informacio</a></li>
+    <li><a href="credits.html">Credits</a></li>
+</ul>
 <h1>Omple el formulari !</h1>
     <div class="form" style="width: 400px">
         DNI: <input type="text" id="dni" style="float: right"><br/><br/>
         Nom: <input type="text" id="name" style="float: right"><br/><br/>
         Cognoms: <input type="text" id="cognom" style="float: right"><br/><br/>
         Nom d'usuari: <input type="text" id="user" style="float: right"><br/><br/>
-        Password: <input type="password" id="passwd" style="float: right"><br/><br/>
-        Direcció: <input type="text" id="adress" style="float: right"><br/><br/>
+        Edat: <input type="number" id="edat" style="float: right"><br/><br/>
+        Email: <input type="email" id="email" style="float: right"><br/><br/>
         <button type="button" id="data" onclick="guardarDades()">Enviar dades</button>
+        <br />
+        <br />
+        <div id="intents" style="font-size: 25px"></div>
+        <br />
+        <div id="errors" style="display: none; font-size: 25px"></div>
     </div>
     <script>
+        if(localStorage.getItem('intents')){
+            document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+        }
         function guardarDades(){
+            let bool = true;
             let dni = document.getElementById("dni").value;
             let nom = document.getElementById("name").value;
             let cognom = document.getElementById("cognom").value;
             let user = document.getElementById("user").value;
-            let passwd = document.getElementById("passwd").value;
-            let adress = document.getElementById("adress").value;
-            if(dni !== "" && nom !== "" && cognom !== "" && user !== "" && passwd !== "" && adress !== ""){
-                if(validarDNI(dni)){
+            let edat = document.getElementById("edat").value;
+            let email = document.getElementById("email").value;
+            let intents;
+            if(dni !== "" && nom !== "" && cognom !== "" && user !== "" && email !== "" && edat !== ""){
+                if(!validarDNI(dni)){
+                    document.getElementById("errors").innerHTML = "El DNI no és correcte";
+                    document.getElementById( 'errors' ).style.display = 'block';
+                    if(localStorage.getItem('intents')){
+                        intents = localStorage.getItem('intents');
+                        intents = parseInt(intents) + 1;
+                        localStorage.setItem('intents', intents);
+                        document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                    }else{
+                        localStorage.setItem('intents', "1");
+                        document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                    }
+                    bool = false;
+                }
+                if(!validarEdat(edat) && bool === true){
+                    document.getElementById("errors").innerHTML = "L'edat no es valida";
+                    document.getElementById( 'errors' ).style.display = 'block';
+                    bool = false;
+                    if(localStorage.getItem('intents')){
+                        intents = localStorage.getItem('intents');
+                        intents = parseInt(intents) + 1;
+                        localStorage.setItem('intents', intents);
+                        document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                    }else{
+                        localStorage.setItem('intents', "1");
+                        document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                    }
+                }
+                if(!validarEmail(email) && bool === true){
+                    document.getElementById("errors").innerHTML = "El email no es valid";
+                    document.getElementById( 'errors' ).style.display = 'block';
+                    bool = false;
+                    if(localStorage.getItem('intents')){
+                        intents = localStorage.getItem('intents');
+                        intents = parseInt(intents) + 1;
+                        localStorage.setItem('intents', intents);
+                        document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                    }else{
+                        localStorage.setItem('intents', "1");
+                        document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                    }
+                }
+                if(bool === true){
                     localStorage.setItem("dni",dni);
                     localStorage.setItem("nom",nom);
                     localStorage.setItem("cognom",cognom);
                     localStorage.setItem("user",user);
-                    localStorage.setItem("passwd",passwd);
-                    localStorage.setItem("adress",adress);
-                }else{
-                    alert("El DNI no és correcte");
+                    localStorage.setItem("email",email);
+                    localStorage.setItem("edat",edat);
+                    document.getElementById( 'errors' ).style.display = 'none';
                 }
             }else{
-                alert("Falten omplenar camps");
+                document.getElementById("errors").innerHTML = "Falten omplenar camps";
+                document.getElementById( 'errors' ).style.display = 'block';
+                if(localStorage.getItem('intents')){
+                    intents = localStorage.getItem('intents');
+                    intents = parseInt(intents) + 1;
+                    localStorage.setItem('intents', intents);
+                    document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                }else{
+                    localStorage.setItem('intents', "1");
+                    document.getElementById("intents").innerHTML = "Intent d'Enviaments del formulari: " + localStorage.getItem('intents');
+                }
             }
         }
 
@@ -47,6 +148,17 @@
             }else{
                 return false;
             }
+        }
+        function validarEdat(edat){
+            if(!isNaN(edat) && edat >= 0 && edat <= 105){
+                return true;
+            }else{
+                return false;
+            }
+        }
+        function validarEmail(email) {
+            const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+            return re.test(String(email).toLowerCase());
         }
     </script>
 </body>
