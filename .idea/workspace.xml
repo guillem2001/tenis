@@ -26,8 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Cambiar el codi a instance mode">
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Afegim la pàgina de informació">
+      <change afterPath="$PROJECT_DIR$/credits.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,8 +42,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -86,9 +88,13 @@
     <configuration name="index.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/m6/index.html" useBuiltInWebServerPort="true">
       <method v="2" />
     </configuration>
+    <configuration name="info.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/tenis/info.html" useBuiltInWebServerPort="true">
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="JavaScript Debug.index.html (1)" />
+        <item itemvalue="JavaScript Debug.info.html" />
         <item itemvalue="JavaScript Debug.index.html" />
       </list>
     </recent_temporary>
@@ -119,7 +125,7 @@
       <workItem from="1619100060015" duration="4704000" />
       <workItem from="1619449030532" duration="527000" />
       <workItem from="1619702531517" duration="2104000" />
-      <workItem from="1619967639539" duration="396000" />
+      <workItem from="1619967639539" duration="942000" />
     </task>
     <task id="LOCAL-00001" summary="afegim estructura de les classes">
       <created>1616085893009</created>
@@ -240,7 +246,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619104140412</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Afegim la pàgina de informació">
+      <created>1619968181750</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1619968181750</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -288,7 +301,8 @@
     <MESSAGE value="afegim la funcio preload per carregar el game" />
     <MESSAGE value="Afegim el temps maxim" />
     <MESSAGE value="Cambiar el codi a instance mode" />
-    <option name="LAST_COMMIT_MESSAGE" value="Cambiar el codi a instance mode" />
+    <MESSAGE value="Afegim la pàgina de informació" />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegim la pàgina de informació" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1619703279606">
