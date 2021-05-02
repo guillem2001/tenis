@@ -11,10 +11,10 @@ new p5(e =>  {
         let o = "Score Santa: " + game.player2.points;
         let t = "Time: " + game.timeGame;
         e.textSize(18);
-        e.text(s, e.width / 2, e.height * 0.4);
+        e.text(s, e.width / 2.4, e.height * 0.4);
         e.textSize(18);
-        e.text(o, e.width / 2, e.height * 0.5);
+        e.text(o, e.width / 2.4, e.height * 0.5);
         e.textSize(18);
-        e.text(t, e.width / 2, e.height * 0.6);
+        e.text(t, e.width / 2.4, e.height * 0.6);
     }
 }, "sketch02");

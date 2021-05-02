@@ -26,12 +26,10 @@
     </select>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Afegim instruccions al menu">
-      <change afterPath="$PROJECT_DIR$/js/scoreboard.js" afterDir="false" />
+    <list default="true" id="14631ba7-7739-451a-b262-7d9ad84fe432" name="Default Changelist" comment="Afegim scoreboard">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/game.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/game.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/sketch.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/sketch.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/js/scoreboard.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/scoreboard.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -132,7 +130,7 @@
       <workItem from="1619449030532" duration="527000" />
       <workItem from="1619702531517" duration="2104000" />
       <workItem from="1619967639539" duration="2009000" />
-      <workItem from="1619976707694" duration="7571000" />
+      <workItem from="1619976707694" duration="7941000" />
     </task>
     <task id="LOCAL-00001" summary="afegim estructura de les classes">
       <created>1616085893009</created>
@@ -302,7 +300,14 @@
       <option name="project" value="LOCAL" />
       <updated>1619989630933</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Afegim scoreboard">
+      <created>1619990472286</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1619990472286</updated>
+    </task>
+    <option name="localTasksCounter" value="26" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -357,7 +362,8 @@
     <MESSAGE value="Afegim al redireccio al fer el formulari" />
     <MESSAGE value="Afegim el time al score" />
     <MESSAGE value="Afegim instruccions al menu" />
-    <option name="LAST_COMMIT_MESSAGE" value="Afegim instruccions al menu" />
+    <MESSAGE value="Afegim scoreboard" />
+    <option name="LAST_COMMIT_MESSAGE" value="Afegim scoreboard" />
   </component>
   <component name="WindowStateProjectService">
     <state width="1807" height="344" key="GridCell.Tab.0.bottom" timestamp="1619703279606">

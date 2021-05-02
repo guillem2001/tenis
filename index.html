@@ -48,6 +48,7 @@
         .active{
             background-color: green;
         }
+
     </style>
 </head>
 <body>
@@ -58,12 +59,14 @@
         <li><a href="info.html">Informacio</a></li>
         <li><a href="credits.html">Credits</a></li>
     </ul>
+    <br />
+    <br />
     <script>
         let edat = localStorage.getItem("edat");
         let nom = localStorage.getItem("nom");
         let dni = localStorage.getItem("dni");
         if(edat != null && nom != null && dni != null){
-            document.write("<div id=\"sketch01\"></div>");
+            document.write("<center><div id=\"sketch01\"></div></center>");
         }else{
             document.write("<h1>Per a jugar tens que configurar l'usuari</h1><br><a href='form.html'><button>Anar a la configuració</button></a>");
         }
