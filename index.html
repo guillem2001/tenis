@@ -53,10 +53,19 @@
     <ul>
         <li><a class="active">Inici</a></li>
         <li><a href="instruccions.html">Instruccions</a></li>
-        <li><a href="conf.html">Configuracio</a></li>
+        <li><a href="form.html">Configuracio</a></li>
         <li><a href="info.html">Informacio</a></li>
         <li><a href="credits.html">Credits</a></li>
     </ul>
-    <div id="sketch01"> </div>
+    <script>
+        let edat = localStorage.getItem("edat");
+        let nom = localStorage.getItem("nom");
+        let dni = localStorage.getItem("dni");
+        if(edat != null && nom != null && dni != null){
+            document.write("<div id=\"sketch01\"></div>");
+        }else{
+            document.write("<h1>Per a jugar tens que configurar l'usuari</h1><br><a href='form.html'><button>Anar a la configuració</button></a>");
+        }
+    </script>
 </body>
 </html>
