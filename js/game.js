@@ -1,17 +1,35 @@
 class Game {
 
-    constructor(p) {
+    constructor(p, points, difficult, time) {
         this.player1 = new Player("player1",p);
 
         this.player2 = new Player("player2",p);
 
         this.ball = new Ball(this.difficultLevel,p);
 
-        this.pointsWinGame = 5;
+        if(points === 1){
+            this.pointsWinGame = 3;
+        }else if(points === 2){
+            this.pointsWinGame = 5;
+        }else{
+            this.pointsWinGame = 7;
+        }
 
-        this.difficultLevel = 2;
+        if(difficult === 1){
+            this.difficultLevel = 1;
+        }else if(difficult === 2){
+            this.difficultLevel = 2;
+        }else {
+            this.difficultLevel = 3;
+        }
 
-        this.timeGame = 120;
+        if(time === 1){
+            this.timeGame = 80;
+        }else if(time === 2){
+            this.timeGame = 100;
+        }else {
+            this.timeGame = 120;
+        }
     }
 
     iniciar(p){
